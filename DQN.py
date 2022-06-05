@@ -120,8 +120,6 @@ class ReplayBuffer():
         if (self.mem_counter == self.max_mem):
             self.mem_counter = 0
 
-    """從memory隨機抽取mini_batch的資料"""
-
     def sample_buffer(self, batch_size):
         max_mem = min(self.mem_counter, self.max_mem)
         batch = np.random.choice(max_mem, batch_size)
@@ -146,8 +144,7 @@ class Agent():
                  , epsilon_dec
                  , input_shape
                  , use_noisy
-                 , iteration=200
-                 , f_name="dqn_model.h5"):
+                 , iteration=200):
 
         self.action_space = [i for i in range(n_actions)]
         self.n_actions = n_actions
@@ -157,7 +154,6 @@ class Agent():
         self.epsilon_dec = epsilon_dec
         self.epsilon_end = epsilon_end
         self.batch_size = batch_size
-        self.model_file = f_name
         self.input_shape = input_shape
         self.iteration = iteration
         self.iteration_counter = 0
