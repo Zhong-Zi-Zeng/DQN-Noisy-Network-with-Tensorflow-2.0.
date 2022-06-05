@@ -1,2 +1,5 @@
 # DQN-Noisy-Network-with-Tensorflow-2.0.
-![Contrast](https://user-images.githubusercontent.com/102845636/172040221-3a470b28-3280-49d6-8a4d-c0609551cad6.png)
+## Env:
+  ** Python = 3.7.10 **
+  ** Tensorflow = 2.7.0 **
+  ** Gym = 0.19.0 **
